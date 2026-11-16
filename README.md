@@ -4,7 +4,7 @@
 
 CSE 4104 – Software Development III | Northern University of Business and Technology, Khulna
 
-> **Status:** Week 2 – project proposal and initial structure. Development starts in the following weeks.
+> **Status:** Week 3 – Software Requirement Specification and initial system diagrams completed. System design and development follow.
 
 ---
 
@@ -40,7 +40,18 @@ Every AI feature works only on the student's own stored data and document text, 
 
 ---
 
-## Proposed Features
+## Objectives
+
+1. Generate personalised daily and weekly study schedules from subjects, exam dates, difficulty levels and available study hours.
+2. Adapt the schedule automatically when tasks are missed or quiz results show weak topics, without overloading any single day.
+3. Summarise uploaded course PDFs and extract key points with page references.
+4. Generate quizzes from the student's own material and use the results to detect weak topics.
+5. Improve study consistency with a dashboard showing progress, study streak and exam countdown.
+6. Deliver a complete, tested, deployed and documented system.
+
+---
+
+## Features
 
 **Core features**
 
@@ -80,11 +91,27 @@ Every AI feature works only on the student's own stored data and document text, 
 cse4104-7g-t05-studymate-ai/
 ├── frontend/     # React application
 ├── backend/      # Express API, authentication, AI integration
+│   └── .env.example
 ├── database/     # Schema and migration files
-├── docs/         # Proposal, SRS, design diagrams, reports
+├── docs/         # Project documents and diagrams
+│   ├── CSE4104-7G-T05_Proposal.pdf
+│   ├── CSE4104-7G-T05_SRS.pdf
+│   ├── CSE4104-7G-T05_UseCaseDiagram.pdf
+│   ├── CSE4104-7G-T05_ERDiagram.pdf
+│   └── CSE4104-7G-T05_ArchitectureDiagram.pdf
 ├── .gitignore
 └── README.md
 ```
+
+## Documentation
+
+| Document | File |
+|---|---|
+| Project proposal (Week 2) | `docs/CSE4104-7G-T05_Proposal.pdf` |
+| Software Requirement Specification (Week 3) | `docs/CSE4104-7G-T05_SRS.pdf` |
+| Use case diagram | `docs/CSE4104-7G-T05_UseCaseDiagram.pdf` |
+| ER diagram | `docs/CSE4104-7G-T05_ERDiagram.pdf` |
+| System architecture diagram | `docs/CSE4104-7G-T05_ArchitectureDiagram.pdf` |
 
 ## Branches
 
