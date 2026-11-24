@@ -4,7 +4,7 @@
 
 CSE 4104 – Software Development III | Northern University of Business and Technology, Khulna
 
-> **Status:** Week 3 – Software Requirement Specification and initial system diagrams completed. System design and development follow.
+> **Status:** Week 4 – System design and software architecture completed (architecture, ER diagram, use cases, activity diagrams, API design and AI workflow). UI design and development follow.
 
 ---
 
@@ -93,12 +93,15 @@ cse4104-7g-t05-studymate-ai/
 ├── backend/      # Express API, authentication, AI integration
 │   └── .env.example
 ├── database/     # Schema and migration files
-├── docs/         # Project documents and diagrams
+├── docs/         # Project documents
 │   ├── CSE4104-7G-T05_Proposal.pdf
 │   ├── CSE4104-7G-T05_SRS.pdf
-│   ├── CSE4104-7G-T05_UseCaseDiagram.pdf
+│   └── CSE4104-7G-T05_SystemDesign.pdf
+├── diagrams/     # Diagram files
+│   ├── CSE4104-7G-T05_ArchitectureDiagram.pdf
 │   ├── CSE4104-7G-T05_ERDiagram.pdf
-│   └── CSE4104-7G-T05_ArchitectureDiagram.pdf
+│   ├── CSE4104-7G-T05_UseCaseDiagram.pdf
+│   └── CSE4104-7G-T05_ActivityDiagram.pdf
 ├── .gitignore
 └── README.md
 ```
@@ -109,9 +112,18 @@ cse4104-7g-t05-studymate-ai/
 |---|---|
 | Project proposal (Week 2) | `docs/CSE4104-7G-T05_Proposal.pdf` |
 | Software Requirement Specification (Week 3) | `docs/CSE4104-7G-T05_SRS.pdf` |
-| Use case diagram | `docs/CSE4104-7G-T05_UseCaseDiagram.pdf` |
-| ER diagram | `docs/CSE4104-7G-T05_ERDiagram.pdf` |
-| System architecture diagram | `docs/CSE4104-7G-T05_ArchitectureDiagram.pdf` |
+| System design and architecture (Week 4) | `docs/CSE4104-7G-T05_SystemDesign.pdf` |
+| System architecture diagram | `diagrams/CSE4104-7G-T05_ArchitectureDiagram.pdf` |
+| ER diagram (13 tables) | `diagrams/CSE4104-7G-T05_ERDiagram.pdf` |
+| Use case diagram (updated) | `diagrams/CSE4104-7G-T05_UseCaseDiagram.pdf` |
+| Activity diagrams (4 workflows) | `diagrams/CSE4104-7G-T05_ActivityDiagram.pdf` |
+
+## System Design Summary
+
+- **Architecture:** React frontend, Express backend (REST API with JWT), PostgreSQL database with file storage on Supabase, and the Gemini API called only from the backend.
+- **Database:** 13 tables for users, subjects, topics, exams, study plans and tasks, documents and pages, summaries, quizzes, questions, attempts and answers.
+- **API:** 44 planned endpoints in nine groups (authentication, profile, subjects and topics, exams, plans and tasks, documents, quizzes and analytics, dashboard, admin).
+- **AI workflow:** the backend builds a prompt from stored data, the Gemini API returns structured JSON, and the backend validates it before saving.
 
 ## Branches
 
